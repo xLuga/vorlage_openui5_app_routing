@@ -1,0 +1,52 @@
+{
+    "_version": "1.1.0",
+    "sap.app": {
+        "id": "master.app",
+        "type": "application",
+        "title": "{{appTitle}}",
+        "description": "{{appDescription}}",
+        "i18n": "i18n/i18n.properties",
+        "applicationVersion": {
+            "version": "1.0.0"
+        }
+    },
+    "sap.ui": {
+        "technology": "UI5"
+    },
+    "sap.ui5": {
+        "rootView": {
+            "viewName": "master.app.view.App",
+            "async": true,
+            "type": "XML"
+        },
+        "dependencies": {
+            "minUI5Version": "1.60.0",
+            "libs": {
+                "sap.ui.core": {},
+                "sap.m": {}
+            }
+        },
+        "routing": {
+            "config": {
+                "viewPath": "master.app.view",
+                "viewType": "XML",
+                "async": true,
+                "controlAggregation": "pages",
+                "controlId": "app",
+                "routerClass": "sap.m.routing.Router"
+            },
+            "routes": [
+                {
+                    "name": "master",
+                    "pattern": "",
+                    "target": "master"
+                }
+            ],
+            "targets": {
+                "master": {
+                    "viewName": "Master"
+                }
+            }
+        }
+    }
+}
