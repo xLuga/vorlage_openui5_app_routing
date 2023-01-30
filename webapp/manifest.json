@@ -40,12 +40,27 @@
                     "name": "master",
                     "pattern": "",
                     "target": "master"
+                },
+                {
+                    "name": "tracker",
+                    "pattern": "tracker",
+                    "target": "tracker"
                 }
             ],
             "targets": {
                 "master": {
-                    "viewName": "Master"
+                    "viewName": "Profil"
+                },
+                "tracker": {
+                    "viewName": "Tracker"
                 }
+            }
+        },
+        "models": {
+            "profil": {
+                "preload": true,
+                "type": "sap.ui.model.json.JSONModel",
+                "uri": "./models/profile_data.json"
             }
         }
     }

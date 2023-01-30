@@ -1,0 +1,15 @@
+<c:FragmentDefinition xmlns="sap.m" xmlns:c="sap.ui.core">
+    <OverflowToolbar>
+        <ToolbarSpacer width="1.75rem" />
+        <OverflowToolbarButton icon="sap-icon://home" width="3rem" type="Neutral" press="onHomePress" />
+        <ToolbarSeparator />
+        <OverflowToolbarButton icon="sap-icon://accept" width="3rem" type="Neutral" press="onTrackerPress" />
+        <ToolbarSeparator />
+        <OverflowToolbarButton icon="sap-icon://accept" width="3rem" type="Neutral" press="onGoalPress" />
+        <ToolbarSeparator />
+        <OverflowToolbarButton icon="sap-icon://accept" width="3rem" type="Neutral" press="onEatPress" />
+        <ToolbarSeparator />
+        <OverflowToolbarButton icon="sap-icon://settings" width="3rem" type="Neutral" press="onSettingsPress" />
+        <ToolbarSpacer width="1rem" />
+    </OverflowToolbar>
+</c:FragmentDefinition>

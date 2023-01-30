@@ -1,0 +1,49 @@
+<mvc:View controllerName="master.app.controller.Profil" xmlns="sap.m" xmlns:mvc="sap.ui.core.mvc" xmlns:c="sap.ui.core" xmlns:form="sap.ui.layout.form" displayBlock="true">
+    <Page title="Mein Profil" titleAlignment="Center">
+        <headerContent>
+            <OverflowToolbar>
+                <OverflowToolbarButton icon="sap-icon://save" press="onSave" />
+            </OverflowToolbar>
+        </headerContent>
+        <content>
+            <form:SimpleForm title="Persönliche Daten" id="personal-data">
+                <form:content>
+                    <Label text="Benutzername" />
+                    <Input id="benutername" placeholder="Benutzername" value="{profil>/personal/benutzername}" width="10rem" />
+
+                    <Label text="Geschlecht" />
+                    <Input id="geschlecht" placeholder="Geschlecht" value="{profil>/personal/geschlecht}" width="10rem" />
+
+                    <Label text="Vorname" />
+                    <Input id="vorname" placeholder="Vorname" value="{profil>/personal/vorname}" width="10rem" />
+
+                    <Label text="Nachname" />
+                    <Input id="nachname" placeholder="Nachname" value="{profil>/personal/nachname}" width="10rem" />
+
+                    <Label text="Alter" />
+                    <Input id="alter" placeholder="Alter" value="{profil>/personal/alter}" width="10rem" />
+                </form:content>
+            </form:SimpleForm>
+
+            <form:SimpleForm title="Gym Daten" id="gym-data">
+                <form:content>
+                    <Label text="Gewicht in KG" />
+                    <Input id="gewicht" placeholder="Gewicht" width="10rem" value="{profil>/gym/gewicht}" />
+
+                    <Label text="Größe in CM" />
+                    <Input id="groesse" placeholder="Größe" width="10rem" value="{profil>/gym/groesse}" />
+
+                    <Label text="Körperfett" />
+                    <Input id="kfa" placeholder="KFA" width="10rem" value="{profil>/gym/körperfett}" />
+                </form:content>
+            </form:SimpleForm>
+        </content>
+        <customHeader />
+        <footer>
+            <c:Fragment fragmentName="master.app.view.FooterToolbar" type="XML" />
+        </footer>
+        <headerContent />
+        <landmarkInfo />
+        <subHeader />
+    </Page>
+</mvc:View>

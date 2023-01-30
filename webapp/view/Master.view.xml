@@ -1,3 +1,0 @@
-<mvc:View controllerName="master.app.controller.Master" xmlns="sap.m" xmlns:mvc="sap.ui.core.mvc" displayBlock="true">
-    <Text text="Ich bin ein Text" />
-</mvc:View>

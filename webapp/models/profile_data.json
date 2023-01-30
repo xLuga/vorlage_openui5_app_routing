@@ -1,0 +1,14 @@
+{
+    "personal": {
+        "benutzername": "GA-Lukas",
+        "geschlecht": "männlich",
+        "vorname": "Lukas",
+        "nachname": "Rausch",
+        "alter": "25"
+    },
+    "gym": {
+        "gewicht": "83",
+        "groesse": "178",
+        "körperfett": "15%"
+    }
+}
