@@ -5,6 +5,6 @@ sap.ui.define([
 ) {
     "use strict";
 
-    return base.extend("master.app.controller.Tracker", {
+    return base.extend("master.app.controller.Calculater", {
     });
 });

@@ -1,0 +1,25 @@
+<mvc:View controllerName="master.app.controller.Calculater" xmlns:mvc="sap.ui.core.mvc" xmlns:form="sap.ui.layout.form" xmlns="sap.m" xmlns:c="sap.ui.core" displayBlock="true" height="100%" busyIndicatorDelay="0">
+    <Page title="KCAL Calculater" titleAlignment="Center">
+        <headerContent>
+            <OverflowToolbar>
+                <OverflowToolbarButton icon="sap-icon://action" />
+                <OverflowToolbarButton icon="sap-icon://save" />
+            </OverflowToolbar>
+        </headerContent>
+        <content>
+            <form:SimpleForm>
+                <form:content>
+                    <Label text="Test" />
+                    <Input placeholder="Ich bin ein Placeholder" />
+                </form:content>
+            </form:SimpleForm>
+        </content>
+        <customHeader />
+        <footer>
+            <c:Fragment fragmentName="master.app.view.FooterToolbar" type="XML" />
+        </footer>
+        <headerContent />
+        <landmarkInfo />
+        <subHeader />
+    </Page>
+</mvc:View>

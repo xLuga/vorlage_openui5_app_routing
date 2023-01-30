@@ -11,9 +11,18 @@
         }
     },
     "sap.ui": {
-        "technology": "UI5"
+        "technology": "UI5",
+        "deviceTypes": {
+            "phone": true,
+            "desktop": false,
+            "tablet": false
+        }
     },
     "sap.ui5": {
+        "contentDensities": {
+            "compact": false,
+            "cozy": true
+        },
         "rootView": {
             "viewName": "master.app.view.App",
             "async": true,
@@ -33,7 +42,8 @@
                 "async": true,
                 "controlAggregation": "pages",
                 "controlId": "app",
-                "routerClass": "sap.m.routing.Router"
+                "routerClass": "sap.m.routing.Router",
+                "transition": "fade"
             },
             "routes": [
                 {
@@ -52,7 +62,7 @@
                     "viewName": "Profil"
                 },
                 "tracker": {
-                    "viewName": "Tracker"
+                    "viewName": "Calculater"
                 }
             }
         },
