@@ -47,9 +47,14 @@
             },
             "routes": [
                 {
-                    "name": "master",
+                    "name": "login",
                     "pattern": "",
-                    "target": "master"
+                    "target": "login"
+                },
+                {
+                    "name": "profile",
+                    "pattern": "profile",
+                    "target": "profile"
                 },
                 {
                     "name": "tracker",
@@ -58,11 +63,14 @@
                 }
             ],
             "targets": {
-                "master": {
+                "profile": {
                     "viewName": "Profil"
                 },
                 "tracker": {
                     "viewName": "Calculater"
+                },
+                "login": {
+                    "viewName": "Login"
                 }
             }
         },
@@ -71,6 +79,11 @@
                 "preload": true,
                 "type": "sap.ui.model.json.JSONModel",
                 "uri": "./models/profile_data.json"
+            },
+            "credentials": {
+                "preload": true,
+                "type": "sap.ui.model.json.JSONModel",
+                "uri": "./models/credentials.json"
             }
         }
     }

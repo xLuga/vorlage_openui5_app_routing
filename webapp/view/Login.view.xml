@@ -1,0 +1,9 @@
+<mvc:View controllerName="master.app.controller.Login" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" height="100%" busyIndicatorDelay="0">
+    <Page backgroundDesign="Solid" title="Login" titleAlignment="Center">
+        <content>
+            <Input id="benutzername" placeholder="Benutzername" type="Text" />
+            <Input id="passwort" placeholder="Passwort eingeben" type="Password" />
+            <Button text="Login" press="onLogin" />
+        </content>
+    </Page>
+</mvc:View>

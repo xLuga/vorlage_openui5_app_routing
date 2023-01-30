@@ -11,7 +11,7 @@ sap.ui.define([
         },
 
         onHomePress: function (oEvent) {
-            this.getOwnerComponent().getRouter().navTo("master");
+            this.getOwnerComponent().getRouter().navTo("profile");
         },
         onGoalPress: function (oEvent) {
             alert("Ziele -> Muss noch implementiert werden!");
