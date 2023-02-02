@@ -1,0 +1,28 @@
+{
+    "values": [
+        {
+            "pal": 0.95,
+            "beschreibung": "schlafen"
+        },
+        {
+            "pal": 1.2,
+            "beschreibung": "ausschließlich sitzend/liegend"
+        },
+        {
+            "pal": 1.4,
+            "beschreibung": "vorwiegend sitzende Tätigkeit"
+        },
+        {
+            "pal": 1.6,
+            "beschreibung": "überwiegend sitzend, dazwischen auch stehend/gehend"
+        },
+        {
+            "pal": 1.8,
+            "beschreibung": "hauptsächlich stehende und gehende Aktivitäten"
+        },
+        {
+            "pal": 2,
+            "beschreibung": "körperliche anstrengende Arbeiten"
+        }
+    ]
+}

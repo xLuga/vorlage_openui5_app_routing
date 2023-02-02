@@ -1,4 +1,4 @@
-<mvc:View controllerName="master.app.controller.Profil" xmlns="sap.m" xmlns:mvc="sap.ui.core.mvc" xmlns:c="sap.ui.core" xmlns:form="sap.ui.layout.form" displayBlock="true">
+<mvc:View controllerName="master.app.controller.Profil" xmlns="sap.m" xmlns:mvc="sap.ui.core.mvc" xmlns:c="sap.ui.core" displayBlock="true">
     <Page title="Mein Profil" titleAlignment="Center">
         <headerContent>
             <OverflowToolbar>
@@ -6,37 +6,58 @@
             </OverflowToolbar>
         </headerContent>
         <content>
-            <form:SimpleForm title="Persönliche Daten" id="personal-data">
-                <form:content>
-                    <Label text="Benutzername" />
-                    <Input id="benutername" placeholder="Benutzername" value="{profil>/personal/benutzername}" width="10rem" />
+            <Panel headerText="Persönliche Daten">
+                <HBox>
+                    <Input id="benutername" description="Benutzername" placeholder="Benutzername" value="{profil>/personal/benutzername}" width="13rem" editable="false" class="sapUiSmallMarginBegin" />
+                </HBox>
 
-                    <Label text="Geschlecht" />
-                    <Input id="geschlecht" placeholder="Geschlecht" value="{profil>/personal/geschlecht}" width="10rem" />
+                <HBox>
+                    <Input id="vorname" description="Vorname" placeholder="Vorname" value="{profil>/personal/vorname}" width="10rem" editable="false" class="sapUiSmallMarginBegin" />
+                    <Input id="nachname" description="Nachname" placeholder="Nachname" value="{profil>/personal/nachname}" width="10rem" editable="false" />
+                </HBox>
 
-                    <Label text="Vorname" />
-                    <Input id="vorname" placeholder="Vorname" value="{profil>/personal/vorname}" width="10rem" />
+                <HBox>
+                    <Input id="geschlecht" description="Geschlecht" placeholder="Geschlecht" value="{profil>/personal/geschlecht}" width="12rem" class="sapUiSmallMarginBegin" editable="false" />
+                    <Input id="alter" description="Alter" width="5rem" placeholder="Alter" value="{profil>/personal/alter}" editable="false" />
+                </HBox>
+            </Panel>
 
-                    <Label text="Nachname" />
-                    <Input id="nachname" placeholder="Nachname" value="{profil>/personal/nachname}" width="10rem" />
+            <Panel headerText="Fitness Daten">
+                <HBox>
+                    <Input id="gewicht" description="Gewicht" placeholder="KG" width="8rem" value="{profil>/gym/gewicht}" class="sapUiSmallMarginBegin" />
+                    <Input id="groesse" description="Größe" placeholder="CM" width="7rem" value="{profil>/gym/groesse}" />
+                    <Input id="kfa" description="KFA" placeholder="15%" width="7rem" value="{profil>/gym/körperfett}" />
+                </HBox>
+            </Panel>
 
-                    <Label text="Alter" />
-                    <Input id="alter" placeholder="Alter" value="{profil>/personal/alter}" width="10rem" />
-                </form:content>
-            </form:SimpleForm>
+            <Panel headerText="Kcal Bedarf">
+                <VBox>
+                    <Input id="grundbedarf" description="Grundbedarf" width="12rem" editable="false" class="sapUiSmallMarginBegin" />
+                    <Input id="leistungsumsatz" description="Leistungsumsatz" width="14rem" editable="false" class="sapUiSmallMarginBegin" />
+                    <Input id="diaet" description="Diät" width="14rem" editable="false" class="sapUiSmallMarginBegin" />
+                    <Input id="masse" description="Massephase" width="14rem" editable="false" class="sapUiSmallMarginBegin" />
+                    <HBox>
+                        <Input id="schlaf" description="Schlaf" width="8rem" class="sapUiSmallMarginBegin" />
+                    </HBox>
 
-            <form:SimpleForm title="Gym Daten" id="gym-data">
-                <form:content>
-                    <Label text="Gewicht in KG" />
-                    <Input id="gewicht" placeholder="Gewicht" width="10rem" value="{profil>/gym/gewicht}" />
+                    <HBox>
+                        <Input id="training" description="Training" width="8rem" class="sapUiSmallMarginBegin" />
+                        <Input id="activity_training" description="Aktivität" width="13rem" class="sapUiSmallMarginBegin" />
+                    </HBox>
 
-                    <Label text="Größe in CM" />
-                    <Input id="groesse" placeholder="Größe" width="10rem" value="{profil>/gym/groesse}" />
+                    <HBox>
+                        <Input id="arbeit" description="Arbeit" width="8rem" class="sapUiSmallMarginBegin" />
+                        <Input id="activity_arbeit" description="Aktivität" width="13rem" class="sapUiSmallMarginBegin" />
+                    </HBox>
 
-                    <Label text="Körperfett" />
-                    <Input id="kfa" placeholder="KFA" width="10rem" value="{profil>/gym/körperfett}" />
-                </form:content>
-            </form:SimpleForm>
+                    <HBox>
+                        <Input id="freizeit" description="Freizeit" width="8rem" class="sapUiSmallMarginBegin" />
+                        <Input id="activity_freizeit" description="Aktivität" width="13rem" class="sapUiSmallMarginBegin" />
+                    </HBox>
+
+                    <Button id="calc_kcal" text="Bedarf berechnen" press="onCalc" class="sapUiSmallMarginBegin" type="Success" />
+                </VBox>
+            </Panel>
         </content>
         <customHeader />
         <footer>

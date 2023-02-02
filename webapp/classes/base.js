@@ -6,15 +6,16 @@ sap.ui.define([
     "use strict";
 
     return Controller.extend("master.app.classes.base", {
+
         onTrackerPress: function (oEvent) {
             this.getOwnerComponent().getRouter().navTo("tracker");
         },
 
         onHomePress: function (oEvent) {
-            this.getOwnerComponent().getRouter().navTo("profile");
+            this.getOwnerComponent().getRouter().navTo("home");
         },
-        onGoalPress: function (oEvent) {
-            alert("Ziele -> Muss noch implementiert werden!");
+        onProfilePress: function (oEvent) {
+            this.getOwnerComponent().getRouter().navTo("profile");
         },
         onEatPress: function (oEvent) {
             alert("Essen -> Muss noch implementiert werden!");

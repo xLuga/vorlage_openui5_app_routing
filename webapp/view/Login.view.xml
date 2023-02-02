@@ -1,9 +1,11 @@
 <mvc:View controllerName="master.app.controller.Login" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" height="100%" busyIndicatorDelay="0">
-    <Page backgroundDesign="Solid" title="Login" titleAlignment="Center">
-        <content>
-            <Input id="benutzername" placeholder="Benutzername" type="Text" />
-            <Input id="passwort" placeholder="Passwort eingeben" type="Password" />
-            <Button text="Login" press="onLogin" />
-        </content>
-    </Page>
+    <VBox height="100%">
+        <FlexBox alignItems="Center" justifyContent="Center" height="100%">
+            <Panel headerText="Login">
+                <Input id="benutzername" placeholder="Benutzername" width="10rem" />
+                <Input id="passwort" placeholder="Passwort eingeben" type="Password" width="10rem" />
+                <Button id="login" text="Login" press="onLogin" />
+            </Panel>
+        </FlexBox>
+    </VBox>
 </mvc:View>

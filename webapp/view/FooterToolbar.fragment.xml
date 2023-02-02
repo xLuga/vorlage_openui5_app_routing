@@ -3,11 +3,11 @@
         <ToolbarSpacer width="1.75rem" />
         <OverflowToolbarButton icon="sap-icon://home" width="3rem" type="Neutral" press="onHomePress" />
         <ToolbarSeparator />
-        <OverflowToolbarButton icon="sap-icon://accept" width="3rem" type="Neutral" press="onTrackerPress" />
+        <OverflowToolbarButton icon="sap-icon://checklist" width="3rem" type="Neutral" press="onTrackerPress" />
         <ToolbarSeparator />
-        <OverflowToolbarButton icon="sap-icon://accept" width="3rem" type="Neutral" press="onGoalPress" />
+        <OverflowToolbarButton icon="sap-icon://person-placeholder" width="3rem" type="Neutral" press="onProfilePress" />
         <ToolbarSeparator />
-        <OverflowToolbarButton icon="sap-icon://accept" width="3rem" type="Neutral" press="onEatPress" />
+        <OverflowToolbarButton icon="sap-icon://basket" width="3rem" type="Neutral" press="onEatPress" />
         <ToolbarSeparator />
         <OverflowToolbarButton icon="sap-icon://settings" width="3rem" type="Neutral" press="onSettingsPress" />
         <ToolbarSpacer width="1rem" />
