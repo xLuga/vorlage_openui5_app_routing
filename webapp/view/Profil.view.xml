@@ -42,7 +42,11 @@
 
                     <HBox>
                         <Input id="training" description="Training" width="8rem" class="sapUiSmallMarginBegin" />
-                        <Input id="activity_training" description="Aktivität" width="13rem" class="sapUiSmallMarginBegin" />
+                        <Input id="activity_training" description="Aktivität" width="13rem" class="sapUiSmallMarginBegin" showSuggestion="true" showValueHelp="true" suggestionItems="{/values}" valueHelpRequest="onValueHelpRequest">
+                            <suggestionItems>
+                                <c:Item text="{Beschreibung}" />
+                            </suggestionItems>
+                        </Input>
                     </HBox>
 
                     <HBox>

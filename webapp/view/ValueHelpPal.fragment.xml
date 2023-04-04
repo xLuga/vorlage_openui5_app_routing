@@ -1,0 +1,5 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core">
+    <SelectDialog id="selectPal" title="Aktivität" items="{/values}" search=".onValueHelpSearch" confirm=".onValueHelpClose" cancel=".onValueHelpClose">
+        <StandardListItem title="{Beschreibung}" />
+    </SelectDialog>
+</core:FragmentDefinition>

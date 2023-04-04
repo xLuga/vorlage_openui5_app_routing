@@ -93,7 +93,7 @@
                 "type": "sap.ui.model.json.JSONModel",
                 "uri": "./models/credentials.json"
             },
-            "pal": {
+            "": {
                 "preload": true,
                 "type": "sap.ui.model.json.JSONModel",
                 "uri": "./models/pal_werte.json"

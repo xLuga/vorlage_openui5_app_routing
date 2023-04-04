@@ -1,5 +1,11 @@
-sap.ui.define(["master/app/classes/base"],
-    function (base) {
+sap.ui.define(["master/app/classes/base",
+    "sap/ui/core/Fragment",
+    "sap/ui/model/Filter",
+    "sap/ui/model/FilterOperator"],
+    function (base,
+        Fragment,
+        Filter,
+        FilterOperator) {
         "use strict";
         return base.extend("master.app.controller.Profil", {
             onInit: function () {
@@ -79,7 +85,41 @@ sap.ui.define(["master/app/classes/base"],
             },
 
             onValueHelpRequest: function (oEvent) {
-                debugger;
+                var sInputValue = oEvent.getSource().getValue(),
+                    oView = this.getView();
+
+                if (!this._pValueHelpDialog) {
+                    this._pValueHelpDialog = Fragment.load({
+                        id: 'LukasID',
+                        name: "master.app.view.ValueHelpPal",
+                        controller: this
+                    }).then(function (oDialog) {
+                        oView.addDependent(oDialog);
+                        return oDialog;
+                    });
+                    this._pValueHelpDialog.then(function (oDialog) {
+                        //oDialog.getBinding("values").filter([new Filter("beschreibung", FilterOperator.Contains, sInputValue)]);
+                        oDialog.open();
+                    });
+
+                }
+            },
+            onValueHelpSearch: function (oEvent) {
+                var sValue = oEvent.getParameter("value");
+                var oFilter = new Filter("beschreibung", FilterOperator.Contains, sValue);
+
+                oEvent.getSource().getBinding("values").filter([oFilter]);
+            },
+
+            onValueHelpClose: function (oEvent) {
+                var oSelectedItem = oEvent.getParameter("selectedItem");
+                oEvent.getSource().getBinding("items").filter([]);
+
+                if (!oSelectedItem) {
+                    return;
+                }
+
+                //  this.byId("productInput").setValue(oSelectedItem.getTitle());
             },
             onSave: function () {
                 alert("Der Save Button wurde gedrückt!");
